@@ -1,0 +1,42 @@
+# Version format ex. "0.0.1"
+version: "1.0.0"                            # Flow specification version
+
+# Basic metadata for the agent
+metadata:
+  name: "text-corrector"                               # Unique identifier
+  description: "A flow that helps you check and correct grammar in a text."       # Flow purpose
+  author: "jaival175"                              # Must match your account username
+  tags: [text, grammar, analyzer]                       # Keywords for categorization
+  private: false                                       # Access control setting
+
+# Define the input variables required
+inputs:
+  context:                                              # First input parameter
+    type: string                                       # Currently only String format
+    description: "context"
+    required: true
+    example: "professional"
+  text:                                              # Second input parameter
+    type: string
+    description: "text"
+    required: true
+    example: "Yo, I'm tryna snag a day off this Monday—think you could approve my leave?"
+
+# LLM configuration
+model:
+  provider: "openai"                            # e.g., anthropic, openai, meta, etc.
+  name: "gpt-4o"                                   # Specific model identifier
+
+# Dataset configuration (Optional)
+# dataset:
+#   source: "author_name/dataset_name"                   # Make sure this dataset exists
+
+# Prompt template configuration
+prompt: |
+  Check and correct grammar in the given text and articulate the text based upon the given context.
+  Context - {context}
+  Given text - {text}
+
+# ReadME configuration
+readme: |
+  This flow helps you correct grammar mistakes in a text and articulates the given text based upon the given context.
