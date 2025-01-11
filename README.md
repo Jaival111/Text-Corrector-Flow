@@ -15,10 +15,7 @@ To use this flow, clone the repository and install the required dependencies:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/grammar-context-flow.git
-
-# Navigate to the project directory
-cd grammar-context-flow
+git clone [https://github.com/Jaival111/Text-Corrector-Flow.git]
 
 # Install dependencies
 pip install -r requirements.txt
